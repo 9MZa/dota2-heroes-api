@@ -6,7 +6,7 @@ use Slim\Factory\AppFactory;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$jsonData = file_get_contents('db.json');
+$jsonData = file_get_contents(__DIR__ . '/../db.json');
 
 $data = json_decode($jsonData, true);
 
