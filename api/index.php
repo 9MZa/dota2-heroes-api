@@ -30,6 +30,13 @@ $app->get('/', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+$app->get('/heroes', function (Request $request, Response $response, $args) use ($data) {
+    $response->getBody()->write(json_encode($data['heroes']));
+
+    return $response
+    ->withHeader('Content-Type', 'application/json');
+});
+
 $app->get('/hero', function ($request, $response, $args) use ($data) {
     $queryParams = $request->getQueryParams();
     $name = isset($queryParams['name']) ? $queryParams['name'] : '';

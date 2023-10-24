@@ -11,6 +11,14 @@ php -S localhost:8000 -t api api/index.php
 
 ### Endpoint
 
+for all heroes
+
+```
+https://dota2-heroes-api.vercel.app/heroes
+```
+
+for single hero
+
 ```
 https://dota2-heroes-api.vercel.app/hero?name=Nyx
 ```
